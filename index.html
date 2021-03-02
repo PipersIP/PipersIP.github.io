@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .timeline-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            width: 200px;
+            margin: auto;
+            display: block;
+        }
+        .polygon {
+            padding: 80px 50px;
+            width: 100%;
+            max-width: 100px;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            /* font-weight: bold; */
+            margin-top: -70px;
+            clip-path: polygon(0% 0%, 100% 40%, 100% 100%, 0% 60%);
+        }
+        .polygon:hover { cursor: pointer;}
+        .red { background-color: rgb(216, 1, 1); }
+        .white { background-color: rgb(216, 240, 205); color: green; }
+        .green { background-color: green;}
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 10px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.507); /* Black w/ opacity */
+        }
+        .modal-container {
+            /* background-color: rgba(0, 0, 0, 0.582); */
+            display: grid;
+            grid-template-columns: 1fr 40px;
+            grid-template-rows: 40px 1 fr 100px;
+            grid-gap: 5px;
+        }
+        .modal-close {
+            grid-row: 1;
+            grid-column: 2;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.459);
+            color: white;
+            font-size: 1.8em;
+            outline: none;
+        }
+        .modal-close:hover {
+            cursor: pointer;
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.699);
+        }
+        .modal-img {
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 2;
+            /* background-color: teal; */
+        }
+        .modal-img img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+        }
+        .modal-credits {
+            grid-row: 3;
+            grid-column: 1 / span 2;
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.459);
+            text-align: center;
+            font-size: 2em;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+        .lrg-scr-card-wrapper { display: none; }
+        
+        @media only screen and (min-width: 1000px) {
+            body {
+                display: grid;
+                grid-template-columns: 225px 1fr;
+                grid-gap: 10px;
+            }
+            .timeline-container {
+                margin-left: 25px;
+                grid-column: 1;
+            }
+            .modal { display: none !important; }
+            .lrg-scr-card-wrapper {
+                display: block !important;
+                width: 100%;
+                grid-column: 2;
+                background-color: rgba(255, 99, 71, 0.493);
+                max-height: 98vh;
+                position: -webkit-sticky; /* Safari */
+                position: sticky;
+                top: 0;
+                
+            }
+        }
+    </style>
+<style>
+    .flick-card {
+        width: 700px;
+        height: 500px;
+        border: 1px solid #f1f1f1;
+        perspective: 2000px;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .flick-card:hover { cursor: pointer; }
+    .flip-card-page {
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.199);
+    }
+    .flick-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50%;            
+    }
+    #cover {
+        grid-column: 2;
+        grid-row: 1;
+        background-color: black;
+        transition: transform 1.5s;
+        transform-style: preserve-3d;
+        transform-origin: left;
+        border-radius: 0 20px 20px 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .inside-2 {
+        background-color: red;
+        grid-column: 2;
+        grid-row: 1;
+        border-radius: 0 20px 20px 0;
+    }
+    .inside-1 {
+        grid-column: 1;
+        background-color: cyan;
+        transform: rotateY(180deg);
+        transition: transform 1.5s;
+        transform-style: preserve-3d;
+        transform-origin: right;
+        border-radius: 20px 0 0 20px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .inside-1 img { float: right}
+    
+</style>
+<style>
+    .flick-card-horiz {
+        width: 700px;   
+        height: 600px;
+        /* border: 1px solid #f1f1f1; */
+        perspective: 2000px;
+        display: block;
+        margin: auto;
+    }
+    #cover-horiz img {border-radius: 0 0 20px 20px;}
+    #cover-horiz img, .inside-1-horiz img, .inside-2-horiz img { 
+        display: block;
+        margin: auto;
+        max-height: 300px;
+        /* max-width: 700px; */
+    }
+    .flick-card-horiz:hover { cursor: pointer; }
+    .flip-card-page {
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.199);
+    }
+    .flick-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 50%;
+    }
+    #cover-horiz {
+        grid-column: 1 / 2;
+        grid-row: 2;
+        /* background-color: white; */
+        transition: transform 1.5s;
+        transform-style: preserve-3d;
+        transform-origin: top;
+        border-radius: 0 0 20px 20px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .inside-2-horiz {
+        grid-column: 1;
+        grid-row: 2;
+        border-radius: 0 0 20px 20px;
+    }
+    #page-2-img {border-radius: 20px 20px 0 0;}
+    #page-3-img {border-radius: 0 0 20px 20px;}
+    .inside-1-horiz {
+        grid-row: 1;
+        /* background-color: cyan; */
+        transform: rotateX(-180deg);
+        transition: transform 1.5s;
+        transform-style: preserve-3d;
+        transform-origin: bottom;
+        border-radius: 20px 20px 0 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+</style>
+    
+</head>
+<body onload='makeCandycane()'>
+    
+    <div class='timeline-container'>
+    </div>
+
+    <div class='modal'></div>
+    <div class='lrg-scr-card-wrapper'>
+        <div class='lrg-scr-card-content'></div>
+    </div>
+    
+</body>
+<script>
+    function makeCandycane() {
+        let current_year = new Date().getFullYear();
+        const container = document.getElementsByClassName('timeline-container')[0];
+        for (let i = current_year; i >= 1982; i--) {
+            let yearbox = document.createElement('div');
+            yearbox.classList.add('polygon');
+            if (i%3 == 0) yearbox.classList.add('red');
+            if (i%3 == 1) yearbox.classList.add('green');
+            if (i%3 == 2) yearbox.classList.add('white');
+            
+            yearbox.innerText = i;
+            yearbox.onclick = function() {thing(i)};
+            container.appendChild(yearbox);
+        }
+
+    }
+</script>
+<script> 
+
+    let something_open = false;
+    let closed = true;
+
+    function thing(year) {
+        something_open = true;
+        closed = true;
+        const card_element_mobl = document.getElementsByClassName('modal')[0];
+        const card_element_dskt = document.getElementsByClassName('lrg-scr-card-content')[0];
+        
+        document.getElementsByClassName('modal')[0].style.display = 'block';
+        document.getElementsByClassName('lrg-scr-card-content')[0].style.display = 'block'; 
+        
+        
+        console.log(year)
+        // switch (year) {
+        //     case 2016:
+        // }
+        let mob_html = `<div class='modal-container'>
+            <div class='modal-img'>
+                <img src='../assets/1985/1985-1.1.png'>
+            </div>
+            <button class='modal-close'>&times;</button>
+            <div class='modal-credits'>
+                designed by Mark Olson
+            </div>
+        </div>`;
+        let lrg_scr_html_flick = `
+        <div class='flick-card' onclick='touchCard()'>
+            <div class='flick-card-inner '>
+                <div id='cover' class='flip-card-page'>
+                    <img src='../assets/other/img/tst-1.png' id='page-2-img'>
+                </div>
+                <div class='inside-1 flip-card-page' id='inside-1'>
+                    <img src='../assets/other/img/tst-2.png' id='page-2-img'>
+                </div>
+                <div class='inside-2 flip-card-page'>
+                    <img src='../assets/other/img/tst-3.png' id='page-3-img'>
+                </div>
+            </div>
+        </div>
+        `;
+        let lrg_scr_html_flip = `
+        <div class='flick-card-horiz' onclick='touchCard()'>
+            <div class='flick-card-inner '>
+                <div id='cover-horiz' class='flip-card-page'>
+                    <img src='../assets/2004/2004-1.1.png' id='page-1-img'>
+                </div>
+                <div class='inside-1-horiz ' id='inside-1-horiz'>
+                    <img src='../assets/2004/2004-2.1.png' id='page-2-img'>
+                </div>
+                <div class='inside-2-horiz flip-card-page'>
+                    <img src='../assets/2004/2004-3.1.png' id='page-3-img'>
+                </div>
+            </div>
+        </div>
+        `;
+        card_element_mobl.innerHTML = mob_html;
+        card_element_dskt.innerHTML = lrg_scr_html_flip;
+    } 
+
+    document.addEventListener("keydown", event => {
+    if (event.isComposing || event.keyCode === 27) {
+        // document.getElementById('designer-credit').innerHTML = '';
+        
+        something_open = false;
+        return;
+    }
+    });
+
+    function close_modals () {
+        document.getElementsByClassName('modal')[0].style.display = 'none';
+        document.getElementsByClassName('lrg-scr-card-content')[0].style.display = 'none'; 
+    }
+
+    function touchCard(vert) {
+            
+        console.log(closed);
+            
+        if (vert) {
+            if (closed) {
+                document.getElementById('cover').style.transform = 'rotateY(-180deg)';
+                document.getElementById('inside-1').style.transform = 'rotateY(0deg)';
+                
+            } else {
+                document.getElementById('inside-1').style.transform = 'rotateY(180deg)';
+                document.getElementById('cover').style.transform = 'rotateY(0deg)';
+                
+            }
+        } else {
+            if (closed) {
+                document.getElementById('cover-horiz').style.transform = 'rotateX(180deg)';
+                document.getElementById('inside-1-horiz').style.transform = 'rotateX(0deg)';
+                
+            } else {
+                document.getElementById('inside-1-horiz').style.transform = 'rotateX(-180deg)';
+                document.getElementById('cover-horiz').style.transform = 'rotateX(0deg)';   
+            }
+        }
+        
+        closed = ! closed;
+        }
+</script>
+
+</html>
