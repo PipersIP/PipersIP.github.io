@@ -78,6 +78,8 @@
         .modal-credits {
             grid-row: 3;
             grid-column: 1 / span 2;
+        }
+        .credits {
             background-color: black;
             background-color: rgba(0, 0, 0, 0.459);
             text-align: center;
@@ -108,10 +110,15 @@
                 position: sticky;
                 top: 0;   
             }
-            /* .lrg-scr-credits {
-                background-color: black;
-                color: white;
-            } */
+            .lrg-scr-credits {
+                bottom:10px;
+                padding: 10px;
+                left: -10%;
+                position: fixed; 
+                z-index: 1;
+                width: 110%;
+                font-size: 1.5em;
+            }
         }
     </style>
 <style>
@@ -143,11 +150,6 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
-    /* @media (-webkit-transform-3d) {
-        #cover {
-            transform-style: preserve-3d;
-        }
-    } */
     .inside-2 {
         background-color: red;
         grid-column: 2;
@@ -237,6 +239,7 @@
     <div class='lrg-scr-card-wrapper'>
         <div class='lrg-scr-card-content'></div>
     </div>
+    <div class='lrg-scr-credits-wrapper'></div> 
     
 </body>
 <script>
@@ -267,6 +270,8 @@
         closed = true;
         const card_element_mobl = document.getElementsByClassName('modal')[0];
         const card_element_dskt = document.getElementsByClassName('lrg-scr-card-content')[0];
+        const crdt_element_dskt = document.getElementsByClassName('lrg-scr-credits-wrapper')[0];
+        
         
         document.getElementsByClassName('modal')[0].style.display = 'block';
         document.getElementsByClassName('lrg-scr-card-content')[0].style.display = 'block'; 
@@ -276,7 +281,7 @@
                 <img src='assets/1985/1985-1.1.png'>
             </div>
             <button class='modal-close' onclick='close_modals()'>&times;</button>
-            <div class='modal-credits'>
+            <div class='modal-credits credits'>
                 designed by Mark Olson
             </div>
         </div>`;
@@ -311,12 +316,13 @@
         </div>
         `;
         let lrg_sct_credits = `
-        <div class='lrg-scr-credits'>
+        <div class='lrg-scr-credits credits'>
             designed by Mark Olson
         </div>
         `;
         card_element_mobl.innerHTML = mob_html;
-        card_element_dskt.innerHTML = lrg_scr_html_flick;
+        card_element_dskt.innerHTML = lrg_scr_html_flip;
+        crdt_element_dskt.innerHTML = lrg_sct_credits;
     } 
 
     document.addEventListener("keydown", event => {
