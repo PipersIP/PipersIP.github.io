@@ -143,6 +143,11 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
+    @media (-webkit-transform-3d) {
+        #cover {
+            transform-style: preserve-3d;
+        }
+    }
     .inside-2 {
         background-color: red;
         grid-column: 2;
@@ -283,13 +288,13 @@
         <div class='flick-card' onclick='touchCard()'>
             <div class='flick-card-inner '>
                 <div id='cover' class='flip-card-page'>
-                    <img src='../assets/other/img/tst-1.png' id='page-2-img'>
+                    <img src='/assets/other/img/tst-1.png' id='page-2-img'>
                 </div>
                 <div class='inside-1 flip-card-page' id='inside-1'>
-                    <img src='../assets/other/img/tst-2.png' id='page-2-img'>
+                    <img src='/assets/other/img/tst-2.png' id='page-2-img'>
                 </div>
                 <div class='inside-2 flip-card-page'>
-                    <img src='../assets/other/img/tst-3.png' id='page-3-img'>
+                    <img src='/assets/other/img/tst-3.png' id='page-3-img'>
                 </div>
             </div>
         </div>
@@ -298,19 +303,19 @@
         <div class='flick-card-horiz' onclick='touchCard()'>
             <div class='flick-card-inner '>
                 <div id='cover-horiz' class='flip-card-page'>
-                    <img src='../assets/2004/2004-1.1.png' id='page-1-img'>
+                    <img src='/assets/2004/2004-1.1.png' id='page-1-img'>
                 </div>
                 <div class='inside-1-horiz ' id='inside-1-horiz'>
-                    <img src='../assets/2004/2004-2.1.png' id='page-2-img'>
+                    <img src='/assets/2004/2004-2.1.png' id='page-2-img'>
                 </div>
                 <div class='inside-2-horiz flip-card-page'>
-                    <img src='../assets/2004/2004-3.1.png' id='page-3-img'>
+                    <img src='/assets/2004/2004-3.1.png' id='page-3-img'>
                 </div>
             </div>
         </div>
         `;
         card_element_mobl.innerHTML = mob_html;
-        card_element_dskt.innerHTML = lrg_scr_html_flip;
+        card_element_dskt.innerHTML = lrg_scr_html_flick;
     } 
 
     document.addEventListener("keydown", event => {
