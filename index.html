@@ -87,7 +87,7 @@
         }
         .lrg-scr-card-wrapper { display: none; }
         
-        @media only screen and (min-width: 1000px) {
+        @media only screen and (min-width: 1000px) and (min-height: 650px) {
             body {
                 display: grid;
                 grid-template-columns: 225px 1fr;
@@ -102,29 +102,29 @@
                 display: block !important;
                 width: 100%;
                 grid-column: 2;
-                background-color: rgba(255, 99, 71, 0.493);
+                /* background-color: rgba(255, 99, 71, 0.493); */
                 max-height: 98vh;
                 position: -webkit-sticky; /* Safari */
                 position: sticky;
-                top: 0;
-                
+                top: 0;   
             }
+            /* .lrg-scr-credits {
+                background-color: black;
+                color: white;
+            } */
         }
     </style>
 <style>
     .flick-card {
         width: 700px;
         height: 1000px;
-        border: 1px solid #f1f1f1;
+        /* border: 1px solid #f1f1f1; */
         perspective: 2000px;
         display: block;
         margin: auto;
         margin-top: 10px;
     }
     .flick-card:hover { cursor: pointer; }
-    .flip-card-page {
-        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.199);
-    }
     .flick-card-inner {
         position: relative;
         width: 100%;
@@ -170,22 +170,23 @@
 </style>
 <style>
     .flick-card-horiz {
-        width: 700px;   
+        width: 700px;    
         height: 600px;
         /* border: 1px solid #f1f1f1; */
         perspective: 2000px;
         display: block;
         margin: auto;
+        margin-top: 10px;
     }
     #cover-horiz img {border-radius: 0 0 20px 20px;}
     #cover-horiz img, .inside-1-horiz img, .inside-2-horiz img { 
         display: block;
         margin: auto;
         max-height: 300px;
-        /* max-width: 700px; */
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.199);
     }
     .flick-card-horiz:hover { cursor: pointer; }
-    .flip-card-page {
+    .flip-card-page-v {
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.199);
     }
     .flick-card-inner {
@@ -270,16 +271,11 @@
         document.getElementsByClassName('modal')[0].style.display = 'block';
         document.getElementsByClassName('lrg-scr-card-content')[0].style.display = 'block'; 
         
-        
-        console.log(year)
-        // switch (year) {
-        //     case 2016:
-        // }
         let mob_html = `<div class='modal-container'>
             <div class='modal-img'>
-                <img src='/assets/1985/1985-1.1.png'>
+                <img src='assets/1985/1985-1.1.png'>
             </div>
-            <button class='modal-close'>&times;</button>
+            <button class='modal-close' onclick='close_modals()'>&times;</button>
             <div class='modal-credits'>
                 designed by Mark Olson
             </div>
@@ -287,14 +283,14 @@
         let lrg_scr_html_flick = `
         <div class='flick-card' onclick='touchCard(true)'>
             <div class='flick-card-inner '>
-                <div id='cover' class='flip-card-page'>
-                    <img src='/assets/other/img/tst-1.png' id='page-2-img'>
+                <div id='cover' class='flip-card-page-v'>
+                    <img src='assets/other/img/tst-1.png' id='page-2-img'>
                 </div>
-                <div class='inside-1 flip-card-page' id='inside-1'>
-                    <img src='/assets/other/img/tst-2.png' id='page-2-img'>
+                <div class='inside-1 flip-card-page-v' id='inside-1'>
+                    <img src='assets/other/img/tst-2.png' id='page-2-img'>
                 </div>
-                <div class='inside-2 flip-card-page'>
-                    <img src='/assets/other/img/tst-3.png' id='page-3-img'>
+                <div class='inside-2 flip-card-page-v'>
+                    <img src='assets/other/img/tst-3.png' id='page-3-img'>
                 </div>
             </div>
         </div>
@@ -303,15 +299,20 @@
         <div class='flick-card-horiz' onclick='touchCard(false)'>
             <div class='flick-card-inner '>
                 <div id='cover-horiz' class='flip-card-page'>
-                    <img src='/assets/2004/2004-1.1.png' id='page-1-img-h'>
+                    <img src='assets/2004/2004-1.1.png' id='page-1-img-h'>
                 </div>
                 <div class='inside-1-horiz ' id='inside-1-horiz'>
-                    <img src='/assets/2004/2004-2.1.png' id='page-2-img-h'>
+                    <img src='assets/2004/2004-2.1.png' id='page-2-img-h'>
                 </div>
                 <div class='inside-2-horiz flip-card-page'>
-                    <img src='/assets/2004/2004-3.1.png' id='page-3-img-h'>
+                    <img src='assets/2004/2004-3.1.png' id='page-3-img-h'>
                 </div>
             </div>
+        </div>
+        `;
+        let lrg_sct_credits = `
+        <div class='lrg-scr-credits'>
+            designed by Mark Olson
         </div>
         `;
         card_element_mobl.innerHTML = mob_html;
