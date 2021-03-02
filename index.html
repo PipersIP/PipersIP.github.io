@@ -114,7 +114,7 @@
 <style>
     .flick-card {
         width: 700px;
-        height: 500px;
+        height: 1000px;
         border: 1px solid #f1f1f1;
         perspective: 2000px;
         display: block;
@@ -143,11 +143,11 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
-    @media (-webkit-transform-3d) {
+    /* @media (-webkit-transform-3d) {
         #cover {
             transform-style: preserve-3d;
         }
-    }
+    } */
     .inside-2 {
         background-color: red;
         grid-column: 2;
@@ -211,8 +211,8 @@
         grid-row: 2;
         border-radius: 0 0 20px 20px;
     }
-    #page-2-img {border-radius: 20px 20px 0 0;}
-    #page-3-img {border-radius: 0 0 20px 20px;}
+    #page-2-img-h {border-radius: 20px 20px 0 0;}
+    #page-3-img-h {border-radius: 0 0 20px 20px;}
     .inside-1-horiz {
         grid-row: 1;
         /* background-color: cyan; */
@@ -277,7 +277,7 @@
         // }
         let mob_html = `<div class='modal-container'>
             <div class='modal-img'>
-                <img src='../assets/1985/1985-1.1.png'>
+                <img src='/assets/1985/1985-1.1.png'>
             </div>
             <button class='modal-close'>&times;</button>
             <div class='modal-credits'>
@@ -285,7 +285,7 @@
             </div>
         </div>`;
         let lrg_scr_html_flick = `
-        <div class='flick-card' onclick='touchCard()'>
+        <div class='flick-card' onclick='touchCard(true)'>
             <div class='flick-card-inner '>
                 <div id='cover' class='flip-card-page'>
                     <img src='/assets/other/img/tst-1.png' id='page-2-img'>
@@ -300,22 +300,22 @@
         </div>
         `;
         let lrg_scr_html_flip = `
-        <div class='flick-card-horiz' onclick='touchCard()'>
+        <div class='flick-card-horiz' onclick='touchCard(false)'>
             <div class='flick-card-inner '>
                 <div id='cover-horiz' class='flip-card-page'>
-                    <img src='/assets/2004/2004-1.1.png' id='page-1-img'>
+                    <img src='/assets/2004/2004-1.1.png' id='page-1-img-h'>
                 </div>
                 <div class='inside-1-horiz ' id='inside-1-horiz'>
-                    <img src='/assets/2004/2004-2.1.png' id='page-2-img'>
+                    <img src='/assets/2004/2004-2.1.png' id='page-2-img-h'>
                 </div>
                 <div class='inside-2-horiz flip-card-page'>
-                    <img src='/assets/2004/2004-3.1.png' id='page-3-img'>
+                    <img src='/assets/2004/2004-3.1.png' id='page-3-img-h'>
                 </div>
             </div>
         </div>
         `;
         card_element_mobl.innerHTML = mob_html;
-        card_element_dskt.innerHTML = lrg_scr_html_flick;
+        card_element_dskt.innerHTML = lrg_scr_html_flip;
     } 
 
     document.addEventListener("keydown", event => {
