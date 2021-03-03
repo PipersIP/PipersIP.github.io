@@ -111,7 +111,7 @@
                 max-height: 98vh;
                 position: -webkit-sticky; /* Safari */
                 position: sticky;
-                top: 0;   
+                top: 10px;   
             }
             .lrg-scr-credits {
                 bottom:10px;
@@ -323,12 +323,12 @@
 </script>
 <script> 
 
-    let something_open = false;
+
     let closed = true;
     let front = true;
 
     function thing(year) {
-        something_open = true;
+
         closed = true;
         let cartoonist = '';
         const malcolm = 'Malcolm Lastname';
@@ -450,7 +450,7 @@
     if (event.isComposing || event.keyCode === 27) {
         // document.getElementById('designer-credit').innerHTML = '';
         close_modals();
-        something_open = false;
+
         return;
     }
     });
