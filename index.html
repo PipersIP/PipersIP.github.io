@@ -176,6 +176,7 @@
     .inside-1 img { float: right}
     #page-1-img, #page-2-img, #page-3-img {
         max-width: calc(100% - 20px);
+        max-height: 90vh;
     }
 </style>
 <style>
@@ -353,9 +354,7 @@
                 <img id='mob-img-modal' src='assets/1985/1985-1.1.png'>
             </div>
             <button class='modal-close' onclick='close_modals()'>&times;</button>
-            <div class='modal-credits credits'>
-                designed by Mark Olson
-            </div>
+            <div class='modal-credits credits'></div>
         </div>`;
         let book_card_html = `
             <div class='book-card' onclick='touchCardBook()'>
@@ -421,6 +420,27 @@
                 document.getElementById('page-2-img-flap').src = 'assets/2004/2004-2.1.png';
                 document.getElementById('page-3-img-flap').src = 'assets/2004/2004-3.1.png';
                 break;
+            case 1996:
+                cartoonist = malcolm;
+                card_element_mobl.innerHTML = mob_html;
+                document.getElementById('mob-img-modal').src = 'assets/1996/1996-1.png';
+                closed = true; 
+                card_element_dskt.innerHTML = book_card_html;
+                document.getElementById('page-1-img').src = 'assets/1996/1996-1.png';
+                document.getElementById('page-2-img').src = 'assets/1996/1996-2.png';
+                document.getElementById('page-3-img').src = 'assets/1996/1996-3.png';
+                break;
+            case 1990:
+                cartoonist = malcolm;
+                card_element_mobl.innerHTML = mob_html;
+                document.getElementById('mob-img-modal').src = 'assets/1990/1990-1.png';
+                front = true;
+                card_element_dskt.innerHTML = flip_card_html;
+                flip_path_front = "1990/1990-1.png";
+                flip_path_back = "1990/1990-2.png";
+                document.getElementById('card-front').src = 'assets/1990/1990-1.png';
+                document.getElementById('card-back').src = 'assets/1990/1990-2.png';
+                break;
             case 1989:
                 cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
@@ -461,13 +481,13 @@
         `;
         crdt_element_dskt.innerHTML = lrg_sct_credits;
         crdt_element_dskt.style.display = 'block'
+
+        document.getElementsByClassName('modal-credits credits')[0].innerHTML = `designed by ${cartoonist}`;
     } 
 
     document.addEventListener("keydown", event => {
     if (event.isComposing || event.keyCode === 27) {
-        // document.getElementById('designer-credit').innerHTML = '';
         close_modals();
-
         return;
     }
     });
