@@ -405,12 +405,12 @@
             `;
         
         switch (year) {
-            case 2018:
+            case 2018: // this is a lie
                 cartoonist = mark;
                 card_element_mobl.innerHTML = mob_html;
                 card_element_dskt.innerHTML = static_card_html;
                 break;
-            case 2004: 
+            case 2004: // flap
                 cartoonist = mark;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/2004/m-2004.png';
@@ -420,7 +420,29 @@
                 document.getElementById('page-2-img-flap').src = 'assets/2004/2004-2.1.png';
                 document.getElementById('page-3-img-flap').src = 'assets/2004/2004-3.1.png';
                 break;
-            case 1996:
+            case 1999: // flip
+                cartoonist = malcolm;
+                card_element_mobl.innerHTML = mob_html;
+                document.getElementById('mob-img-modal').src = 'assets/1999/m-1999-1.png';
+                front = true;
+                card_element_dskt.innerHTML = flip_card_html;
+                flip_path_front = "1999/m-1999-1.png";
+                flip_path_back = "1999/m-1999-2.png";
+                document.getElementById('card-front').src = 'assets/1999/m-1999-1.png';
+                document.getElementById('card-back').src = 'assets/1999/m-1999-2.png';
+                break;
+            case 1998: // flip
+                cartoonist = malcolm;
+                card_element_mobl.innerHTML = mob_html;
+                document.getElementById('mob-img-modal').src = 'assets/1998/m-1998-1.png';
+                front = true;
+                card_element_dskt.innerHTML = flip_card_html;
+                flip_path_front = "1998/m-1998-1.png";
+                flip_path_back = "1998/m-1998-2.png";
+                document.getElementById('card-front').src = 'assets/1998/m-1998-1.png';
+                document.getElementById('card-back').src = 'assets/1998/m-1998-2.png';
+                break;
+            case 1996: // book
                 cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/1996/1996-1.png';
@@ -430,7 +452,7 @@
                 document.getElementById('page-2-img').src = 'assets/1996/1996-2.png';
                 document.getElementById('page-3-img').src = 'assets/1996/1996-3.png';
                 break;
-            case 1990:
+            case 1990: // flip
                 cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/1990/1990-1.png';
@@ -441,7 +463,7 @@
                 document.getElementById('card-front').src = 'assets/1990/1990-1.png';
                 document.getElementById('card-back').src = 'assets/1990/1990-2.png';
                 break;
-            case 1989:
+            case 1989: // flip
                 cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/1989/1989-1.png';
@@ -452,7 +474,7 @@
                 document.getElementById('card-front').src = 'assets/1989/1989-1.png';
                 document.getElementById('card-back').src = 'assets/1989/1989-2.png';
                 break;
-            case 1988: 
+            case 1988: // flip
                 cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/1988/1988-1.png';
@@ -463,7 +485,7 @@
                 document.getElementById('card-front').src = 'assets/1988/1988-2.png';
                 document.getElementById('card-back').src = 'assets/1988/m-1988-2.png';
                 break;
-            case 1985: 
+            case 1985: // book
                 cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/1985/1985-1.1.png';
