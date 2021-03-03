@@ -327,6 +327,11 @@
     let closed = true;
     let front = true;
 
+    let flip_path_front = "";
+    let flip_path_back = "";
+
+    
+
     function thing(year) {
 
         closed = true;
@@ -382,9 +387,8 @@
                 </div>
             </div>
             `;
-        // that path thing needs to be fixed at some point, DOM w .onclick = 'touchCard...' shld wrk
         let flip_card_html = `
-            <div class="flip-card" onclick='touchCardFlip("1988/1988-2.png", "1988/m-1988-2.png")'>
+            <div class="flip-card" onclick='touchCardFlip()'>
                 <div class="flip-card-inner card-shadow" id='inner'>
                     <div class="flip-card-front">
                         <img id='card-front' src = 'assets/other/img/tst-1.png'>
@@ -417,12 +421,25 @@
                 document.getElementById('page-2-img-flap').src = 'assets/2004/2004-2.1.png';
                 document.getElementById('page-3-img-flap').src = 'assets/2004/2004-3.1.png';
                 break;
+            case 1989:
+                cartoonist = malcolm;
+                card_element_mobl.innerHTML = mob_html;
+                document.getElementById('mob-img-modal').src = 'assets/1989/1989-1.png';
+                front = true;
+                card_element_dskt.innerHTML = flip_card_html;
+                flip_path_front = "1989/1989-1.png";
+                flip_path_back = "1989/1989-2.png";
+                document.getElementById('card-front').src = 'assets/1989/1989-1.png';
+                document.getElementById('card-back').src = 'assets/1989/1989-2.png';
+                break;
             case 1988: 
                 cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/1988/1988-1.png';
                 front = true;
                 card_element_dskt.innerHTML = flip_card_html;
+                flip_path_front = "1988/1988-2.png";
+                flip_path_back = "1988/m-1988-2.png";
                 document.getElementById('card-front').src = 'assets/1988/1988-2.png';
                 document.getElementById('card-back').src = 'assets/1988/m-1988-2.png';
                 break;
@@ -525,14 +542,14 @@
 </script>
 <script>
     
-    // let front = true;
     function touchCardFlip(path_front, path_back) {
-        document.getElementById('card-back').src = 'assets/' + path_back;
-        document.getElementById('card-front').src = 'assets/' + path_front;
+        document.getElementById('card-back').src = 'assets/' + flip_path_back;
+        document.getElementById('card-front').src = 'assets/' + flip_path_front;
         if (front) document.getElementById('inner').style.transform = 'rotateY(180deg)';
         else document.getElementById('inner').style.transform = 'rotateY(0deg)'
         front = ! front;
     }
+
 </script>
 
 </html>
