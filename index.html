@@ -342,6 +342,8 @@
         let cartoonist = '';
         const malcolm = 'Malcolm Lastname';
         const mark = 'Mark Olson';
+        let no_card = false;
+
         const card_element_mobl = document.getElementsByClassName('modal')[0];
         const card_element_dskt = document.getElementsByClassName('lrg-scr-card-content')[0];
         const crdt_element_dskt = document.getElementsByClassName('lrg-scr-credits-wrapper')[0];
@@ -584,16 +586,26 @@
                 document.getElementById('page-2-img').src = 'assets/1985/1985-2.1.png';
                 document.getElementById('page-3-img').src = 'assets/1985/1985-3.png';
                 break;
+            default:
+                no_card = true;
+                break;
         }
-        let lrg_sct_credits = `
-        <div class='lrg-scr-credits credits'>
-            designed by ${cartoonist}
-        </div>
-        `;
-        crdt_element_dskt.innerHTML = lrg_sct_credits;
-        crdt_element_dskt.style.display = 'block'
+        
 
-        document.getElementsByClassName('modal-credits credits')[0].innerHTML = `designed by ${cartoonist}`;
+        if (no_card) {
+            card_element_mobl.innerHTML = '';
+            card_element_dskt.innerHTML = '';
+            crdt_element_dskt.innerHTML = '';
+        } else {
+            let lrg_sct_credits = `
+                <div class='lrg-scr-credits credits'>
+                    designed by ${cartoonist}
+                </div>
+                `;
+            crdt_element_dskt.innerHTML = lrg_sct_credits;
+            crdt_element_dskt.style.display = 'block'
+            document.getElementsByClassName('modal-credits credits')[0].innerHTML = `designed by ${cartoonist}`;
+        }
     } 
 
     document.addEventListener("keydown", event => {
