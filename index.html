@@ -317,16 +317,21 @@
     function makeCandycane() {
         let current_year = new Date().getFullYear();
         const container = document.getElementsByClassName('timeline-container')[0];
+        const valid_years = [1985, 1988, 1989, 1990, 1996, 1998, 1999, 2001, 2004, 2005, 2007, 2008, 2014, 2015, 2016, 2019, 2020];
+        let j = 1;
         for (let i = current_year; i >= 1982; i--) {
-            let yearbox = document.createElement('div');
-            yearbox.classList.add('polygon');
-            if (i%3 == 0) yearbox.classList.add('red');
-            if (i%3 == 1) yearbox.classList.add('green');
-            if (i%3 == 2) yearbox.classList.add('white');
-            
-            yearbox.innerText = i;
-            yearbox.onclick = function() {thing(i)};
-            container.appendChild(yearbox);
+            if (valid_years.includes(i)) {
+                let yearbox = document.createElement('div');
+                yearbox.classList.add('polygon');
+                if (j%3 == 0) yearbox.classList.add('red');
+                if (j%3 == 1) yearbox.classList.add('green');
+                if (j%3 == 2) yearbox.classList.add('white');
+                j++;
+                
+                yearbox.innerText = i;
+                yearbox.onclick = function() {thing(i)};
+                container.appendChild(yearbox);
+            }
         }
     }
 </script>
