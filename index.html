@@ -26,7 +26,12 @@
         }
         .polygon:hover { cursor: pointer;}
         .red { background-color: rgb(216, 1, 1); }
-        .white { background-color: rgb(205, 253, 255); color: green; }
+        .white { 
+            background: rgb(236,254,255);
+            background: radial-gradient(circle, rgba(236,254,255,1) 30%, rgba(163,232,255,1) 100%);
+            /* background-color: rgb(205, 253, 255);  */
+            color: green; 
+        }
         .green { background-color: green;}
         .modal {
             display: none; /* Hidden by default */
@@ -322,7 +327,6 @@
             yearbox.onclick = function() {thing(i)};
             container.appendChild(yearbox);
         }
-
     }
 </script>
 <script> 
@@ -479,7 +483,7 @@
                 document.getElementById('page-3-img').src = 'assets/2007/2007-3.png';
                 break;
             case 2005: // flap
-                cartoonist = mark;
+                cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/2005/m-2005-1.png';
                 closed = true;
@@ -492,7 +496,7 @@
                 document.getElementsByClassName('inside-1-horiz')[0].classList.add('flap-purple');
                 break;
             case 2004: // flap
-                cartoonist = mark;
+                cartoonist = malcolm;
                 card_element_mobl.innerHTML = mob_html;
                 document.getElementById('mob-img-modal').src = 'assets/2004/m-2004.png';
                 closed = true;
@@ -596,6 +600,8 @@
             card_element_mobl.innerHTML = '';
             card_element_dskt.innerHTML = '';
             crdt_element_dskt.innerHTML = '';
+            document.getElementsByClassName('modal')[0].style.display = 'none';
+            document.getElementsByClassName('lrg-scr-card-content')[0].style.display = 'none'; 
         } else {
             let lrg_sct_credits = `
                 <div class='lrg-scr-credits credits'>
