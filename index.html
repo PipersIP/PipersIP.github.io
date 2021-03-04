@@ -276,8 +276,9 @@
     .static-card {
         display: block;
         margin: auto;
-        max-width: 60vh;
-        height: 70vh;
+        width: 90%;
+        max-width: 700px;
+        /* height: 70vh; */
         max-height: 900px;
         background-color: white;
         border-radius: 20px;
@@ -402,25 +403,37 @@
             `;
         let static_card_html = `
             <div class='static-card card-shadow'>
-                <img src='assets/other/img/tst-1.png'>
+                <img id='static-img'>
             </div>
             `;
         
         switch (year) {
-            case 2018: // this is a lie
+            case 2020: // book
                 cartoonist = mark;
                 card_element_mobl.innerHTML = mob_html;
-                card_element_dskt.innerHTML = static_card_html;
-                break;
-            case 2007: // book
-                cartoonist = malcolm;
-                card_element_mobl.innerHTML = mob_html;
-                document.getElementById('mob-img-modal').src = 'assets/2007/2007-1.png';
+                document.getElementById('mob-img-modal').src = 'assets/2020/Pipers Xmas 2020email2.png';
                 closed = true; 
                 card_element_dskt.innerHTML = book_card_html;
-                document.getElementById('page-1-img').src = 'assets/2007/2007-1.png';
-                document.getElementById('page-2-img').src = 'assets/2007/2007-2.png';
-                document.getElementById('page-3-img').src = 'assets/2007/2007-3.png';
+                document.getElementById('page-1-img').src = 'assets/2020/2020-1.png';
+                document.getElementById('page-2-img').src = 'assets/2020/2020-3.png';
+                document.getElementById('page-3-img').src = 'assets/2020/2020-2.png';
+                break;
+            case 2019: // static
+                cartoonist = mark;
+                card_element_mobl.innerHTML = mob_html;
+                document.getElementById('mob-img-modal').src = 'assets/2019/c2019.png';
+                card_element_dskt.innerHTML = static_card_html;
+                document.getElementById('static-img').src = 'assets/2019/c2019.png';
+                break;
+            case 2016: // book
+                cartoonist = mark;
+                card_element_mobl.innerHTML = mob_html;
+                document.getElementById('mob-img-modal').src = 'assets/2016/2016-1.png';
+                closed = true; 
+                card_element_dskt.innerHTML = book_card_html;
+                document.getElementById('page-1-img').src = 'assets/2016/2016-1.png';
+                document.getElementById('page-2-img').src = 'assets/2016/2016-2.png';
+                document.getElementById('page-3-img').src = 'assets/2016/2016-3.1.png';
                 break;
             case 2015: // flip
                 cartoonist = mark;
@@ -452,6 +465,16 @@
                 flip_path_back = "2008/2008-2.1.png";
                 document.getElementById('card-front').src = 'assets/2008/2008-1.png';
                 document.getElementById('card-back').src = 'assets/2008/2008-2.1.png';
+                break;
+            case 2007: // book
+                cartoonist = malcolm;
+                card_element_mobl.innerHTML = mob_html;
+                document.getElementById('mob-img-modal').src = 'assets/2007/2007-1.png';
+                closed = true; 
+                card_element_dskt.innerHTML = book_card_html;
+                document.getElementById('page-1-img').src = 'assets/2007/2007-1.png';
+                document.getElementById('page-2-img').src = 'assets/2007/2007-2.png';
+                document.getElementById('page-3-img').src = 'assets/2007/2007-3.png';
                 break;
             case 2005: // flap
                 cartoonist = mark;
