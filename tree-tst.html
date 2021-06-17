@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function xmas() {
+            alert('merry christmas');
+        }
+    </script>
 </head>
 <style>
     #christmas-tree {
@@ -15,33 +20,45 @@
         display: block;
         margin: auto;;
     }
+    .flipped {
+        /*-webkit-transform: scaleX(-1);*/
+        transform: scaleX(-1);
+        position: relative;
+        left: -50px;
+    }
     #xmas-1 {
         grid-row: 1 / span 3;
         grid-column: 1;
         width: 400px;
         height: 500px;
+        z-index: 3;
     }
     #xmas-2 {
         grid-row: 2 / span 3;
         grid-column: 1;
         width: 450px;
         height: 500px;
+        z-index: 2;
     }
     #xmas-3 {
         grid-row: 3 / span 3;
         grid-column: 1;
         width: 500px;
         height: 500px;
+        z-index: 1;
     }
     .bauble {
         width: 100px;
+    }
+    .bauble:hover {
+        cursor: pointer;
     }
     #tree-decorations {
         width: 500px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(9, 1fr);
-        z-index: 1;
+        z-index: 4;
         position: absolute;
         top: 0;
         left: 0; 
@@ -63,20 +80,30 @@
     }
     #decoration-4 {
         grid-row: 6;
+        grid-column: 2;
+    }
+    #decoration-5 {
+        grid-row: 7;
+        grid-column: 4;
+    }
+    #decoration-6 {
+        grid-row: 5;
         grid-column: 3;
     }
 </style>
 <body>
     <div id='christmas-tree'>
         <img src='christmas-tree-section.png' id='xmas-3' class='tree'>
-        <img src='christmas-tree-section.png' id='xmas-2' class='tree'>
+        <img src='christmas-tree-section.png' id='xmas-2' class='tree flipped'>
         <img src='christmas-tree-section.png' id='xmas-1' class='tree'>
     </div>
     <div id='tree-decorations'>
-        <img src='bauble.png' id='decoration-1' class='bauble'>
-        <img src='bauble.png' id='decoration-2' class='bauble'>
-        <img src='bauble.png' id='decoration-3' class='bauble'>
-        <img src='bauble.png' id='decoration-4' class='bauble'>
+        <img src='bauble.png' id='decoration-1' class='bauble' onclick='xmas();'>
+        <img src='bauble.png' id='decoration-2' class='bauble' onclick='xmas();'>
+        <img src='bauble.png' id='decoration-3' class='bauble' onclick='xmas();'>
+        <img src='bauble.png' id='decoration-4' class='bauble' onclick='xmas();'>
+        <img src='bauble.png' id='decoration-5' class='bauble' onclick='xmas();'>
+        <img src='bauble.png' id='decoration-6' class='bauble' onclick='xmas();'>
     </div>
 </body>
 </html>
