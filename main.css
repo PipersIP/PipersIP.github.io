@@ -175,6 +175,8 @@ body {
 #decoration-17 {
     grid-row: 11;
     grid-column: 3;
+    border-radius: 20px;
+    transform: rotate(10deg);
 }
 
 
@@ -182,7 +184,7 @@ body {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 14; /* Sit on top */
+    z-index: 12; /* Sit on top */
     padding-top: 10px; /* Location of the box */
     left: 0;
     top: 0;
