@@ -167,6 +167,7 @@ body {
 #decoration-15 {
     grid-row: 10;
     grid-column: 4;
+    border-radius: 20px;
 }
 #decoration-16 {
     grid-row: 11;
