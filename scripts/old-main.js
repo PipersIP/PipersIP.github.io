@@ -81,7 +81,7 @@ function thing(year) {
         case 2020: // book
             cartoonist = malcolm;
             card_element_mobl.innerHTML = mob_html;
-            document.getElementById('mob-img-modal').src = 'assets/2020/Pipers Xmas 2020email2.png';
+            document.getElementById('mob-img-modal').src = 'assets/2020/Pipers_Xmas_2020email2.png';
             closed = true; 
             card_element_dskt.innerHTML = book_card_html;
             document.getElementById('page-1-img').src = 'assets/2020/2020-1.png';
