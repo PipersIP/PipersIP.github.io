@@ -60,13 +60,13 @@ function thing(year) {
         </div>
         `;
     let flip_card_html = `
-        <div class="flip-card" onclick='touchCardFlip()'>
+        <div class="flip-card" onclick='flippingCard()'>
             <div class="flip-card-inner card-shadow" id='inner'>
                 <div class="flip-card-front">
                     <img id='card-front' src=''>
                 </div>
                 <div class="flip-card-back">
-                <img id='card-back'>
+                    <img id='card-back'>
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@ function thing(year) {
             document.getElementById('page-2-img').src = 'assets/2016/2016-2.PNG';
             document.getElementById('page-3-img').src = 'assets/2016/2016-3.1.png';
             break;
-        case 2015: // flip
+        case 2015: // book
             cartoonist = malcolm;
             card_element_mobl.innerHTML = mob_html;
             document.getElementById('mob-img-modal').src = 'assets/2015/2015-1.PNG';
@@ -115,7 +115,7 @@ function thing(year) {
             document.getElementById('page-2-img').src = 'assets/2015/2015-2.PNG';
             document.getElementById('page-3-img').src = 'assets/2015/2015-3.PNG';
             break;
-        case 2014: // flip
+        case 2014: // book
             cartoonist = mark;
             card_element_mobl.innerHTML = mob_html;
             document.getElementById('mob-img-modal').src = 'assets/2014/m-2014.png';
@@ -239,10 +239,10 @@ function thing(year) {
             document.getElementById('mob-img-modal').src = 'assets/1988/1988-1.PNG';
             front = true;
             card_element_dskt.innerHTML = flip_card_html;
-            flip_path_front = "1988/1988-2.png";
+            flip_path_front = "1988/1988-2.PNG";
             flip_path_back = "1988/m-1988-2.png";
-            document.getElementById('card-front').src = 'assets/1988/1988-2.PNG';
-            document.getElementById('card-back').src = 'assets/1988/m-1988-2.png';
+            document.getElementById('card-front').src = 'assets/' + flip_path_front;
+            document.getElementById('card-back').src  = 'assets/' + flip_path_back;
             break;
         case 1985: // book
             cartoonist = malcolm;

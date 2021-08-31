@@ -25,10 +25,17 @@ function touchCardFlap() {
 }
 
 
-function touchCardFlip(path_front, path_back) {
-    document.getElementById('card-back').src = 'assets/' + flip_path_back;
-    document.getElementById('card-front').src = 'assets/' + flip_path_front;
-    if (front) document.getElementById('inner').style.transform = 'rotateY(180deg)';
-    else document.getElementById('inner').style.transform = 'rotateY(0deg)'
-    front = ! front;
+// function touchCardFlip(path_front, path_back) {
+//     document.getElementById('card-back').src = 'assets/' + flip_path_back;
+//     document.getElementById('card-front').src = 'assets/' + flip_path_front;
+//     if (front) document.getElementById('inner').style.transform = 'rotateY(180deg)';
+//     else document.getElementById('inner').style.transform = 'rotateY(0deg)'
+//     front = ! front;
+// }
+
+let flipped = false;
+function flippingCard() {
+    if (! flipped) document.getElementsByClassName("flip-card-inner")[0].style.transform = "rotateY(180deg)";
+    else document.getElementsByClassName("flip-card-inner")[0].style.transform = "rotateY(0deg)";
+    flipped = ! flipped;
 }
