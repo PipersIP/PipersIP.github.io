@@ -62,6 +62,36 @@ function createFlopper(n) {
             pgT.src = pth + "2015/2015-3.PNG";
             mdl.src = pth + "2015/2015-1.PNG";
             break;
+        case 2014:
+            pgF.src = pth + "2014/m-2014.png";
+            pgS.src = pth + "2014/2014-pg-2.png";
+            pgT.src = pth + "2014/2014-pg-3.png";
+            mdl.src = pth + "2014/m-2014.png";
+            break;
+        case 2007:
+            pgF.src = pth + "2007/2007-1.png";
+            pgS.src = pth + "2007/2007-2.PNG";
+            pgT.src = pth + "2007/2007-3.png";
+            mdl.src = pth + "2007/2007-1.png";
+            break;
+        case 2001:
+            pgF.src = pth + "2001/2001a.png";
+            pgS.src = pth + "2001/2001b.png";
+            pgT.src = pth + "2001/2001c.png";
+            mdl.src = pth + "2001/2001a.png";
+            break;
+        case 1996:
+            pgF.src = pth + "1996/1996-1.PNG";
+            pgS.src = pth + "1996/1996-2.PNG";
+            pgT.src = pth + "1996/1996-3.PNG";
+            mdl.src = pth + "1996/1996-1.PNG";
+            break;
+        case 1985:
+            pgF.src = pth + "1985/1985-1.1.png";
+            pgS.src = pth + "1985/1985-2.1.png";
+            pgT.src = pth + "1985/1985-3.png";
+            mdl.src = pth + "1985/1985-1.1.png";
+            break;
     }
 
 }
