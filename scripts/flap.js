@@ -41,7 +41,6 @@ function createFlapper(n) {
     const pgS = document.getElementById('page-2-img-flap');
     const pgT = document.getElementById('page-3-img-flap');
     const mdl = document.getElementById('mob-img-modal');
-    const pth = "assets/";
 
     switch(n) {
         case 2004:

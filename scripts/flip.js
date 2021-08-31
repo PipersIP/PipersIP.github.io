@@ -32,7 +32,7 @@ function createFlipper(n) {
     const frt = document.getElementById('card-front');
     const bck = document.getElementById('card-back');
     const mdl = document.getElementById('mob-img-modal');
-    const pth = "assets/";
+    
     switch(n) {
         case 2008:
             frt.src = pth + "2008/2008-1.PNG";

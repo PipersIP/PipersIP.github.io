@@ -41,7 +41,6 @@ function createFlopper(n) {
     const pgS = document.getElementById('page-2-img');
     const pgT = document.getElementById('page-3-img');
     const mdl = document.getElementById('mob-img-modal');
-    const pth = "assets/";
 
     switch(n) {
         case 2020:
