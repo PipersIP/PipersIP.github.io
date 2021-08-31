@@ -1,4 +1,9 @@
-.flip-card {
+@media only screen and (min-width: 1000px) and (min-height: 650px) {
+
+  .modal { display: none !important; }
+  .lrg-scr-card-wrapper { display: block !important; }
+
+  .flip-card {
     background-color: transparent;
     width: 500px;
     height: 575px;
@@ -14,7 +19,7 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  
+
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -23,10 +28,10 @@
     backface-visibility: hidden;
   }
   .flip-card-front > img, .flip-card-back > img {
-      max-width: 500px;
-      max-height: 575px;
+    max-width: 500px;
+    max-height: 575px;
   }
-  
+
   /* Style the front & back (in case image is missing) */
   .flip-card-front {
     background-color: white;
@@ -38,3 +43,4 @@
     transform: rotateY(180deg);
   }
   .card-shadow { box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.349); }
+}

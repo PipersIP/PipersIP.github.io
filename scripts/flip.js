@@ -9,6 +9,24 @@ function flipCard() {
 
 
 function createFlipper(n) {
+
+    const mob_disp = document.getElementsByClassName('modal-wrapper')[0]; // mobile display
+    mob_disp.classList.remove("hide-modal");
+
+    let mbHtml = `
+        <div class="modal">
+            <div class='modal-container'>
+                <div class='modal-img'>
+                    <img id='mob-img-modal' src='assets/1985/1985-1.1.png'>
+                </div>
+                <button class='modal-close' onclick='close_modals()'>&times;</button>
+                <div class='modal-credits credits'></div>
+            </div>
+        </div>
+        `;
+    mob_disp.innerHTML = mbHtml;
+
+
     flipped = false;
     lcHtml = `
         <div class="flip-card" onclick="flipCard()">
@@ -51,4 +69,11 @@ function createFlipper(n) {
             bck.src  = "assets/1988/m-1988-2.png";
             break;
     }
+}
+
+function close_modals () {
+    // document.getElementsByClassName('modal')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].classList.add("hide-modal");
+    // document.getElementsByClassName('lrg-scr-card-content')[0].style.display = 'none'; 
+    document.getElementsByClassName('lrg-scr-card-content')[0].innerHTML = "";
 }
