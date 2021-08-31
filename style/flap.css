@@ -1,0 +1,63 @@
+@media only screen and (min-width: 1000px) and (min-height: 650px) {
+
+    .flap-card {
+        height: 600px;
+        /* border: 1px solid #f1f1f1; */
+        perspective: 2000px;
+        display: block;
+        margin: auto;
+    }
+    #cover-horiz img {border-radius: 0 0 20px 20px;}
+    #cover-horiz img, .inside-1-horiz img, .inside-2-horiz img { 
+        display: block;
+        margin: auto;
+        max-height: 300px;
+    }
+    .flap-card:hover { cursor: pointer; }
+    .flick-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 50%;
+    }
+    #cover-horiz {
+        grid-column: 1 / 2;
+        grid-row: 2;
+        background-color: white;
+        transition: transform 1.5s;
+        
+        transform-origin: top;
+        border-radius: 0 0 20px 20px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .inside-2-horiz {
+        background-color: white;
+        grid-column: 1;
+        grid-row: 2;
+        border-radius: 0 0 20px 20px;
+    }
+    .inside-1-horiz {
+        grid-row: 1;
+        background-color: white;
+        transform: rotateX(-180deg);
+        transition: transform 1.5s;
+        
+        transform-origin: bottom;
+        border-radius: 20px 20px 0 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .flap-black { background-color: rgb(20, 17, 20) !important; }
+    .flap-purple { background-color: rgb(168, 151, 162) !important; }
+
+
+    @media only screen and (min-width: 1070px) {
+        .flap-card {
+            width: 800px;
+            height: 600px;
+        }
+    }
+    
+}

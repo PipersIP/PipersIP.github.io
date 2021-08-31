@@ -16,7 +16,7 @@ function createFlipper(n) {
     createModal();
 
     flipped = false;
-    lcHtml = `
+    const lcHtml = `
         <div class="flip-card" onclick="flipCard()">
             <div class="flip-card-inner card-shadow">
             <div class="flip-card-front">
