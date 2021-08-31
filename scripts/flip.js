@@ -17,7 +17,7 @@ function createFlipper(n) {
         <div class="modal">
             <div class='modal-container'>
                 <div class='modal-img'>
-                    <img id='mob-img-modal' src='assets/1985/1985-1.1.png'>
+                    <img id='mob-img-modal' src="">
                 </div>
                 <button class='modal-close' onclick='close_modals()'>&times;</button>
                 <div class='modal-credits credits'></div>
@@ -43,30 +43,38 @@ function createFlipper(n) {
     document.getElementsByClassName('lrg-scr-card-content')[0].innerHTML = lcHtml;
     const frt = document.getElementById('card-front');
     const bck = document.getElementById('card-back');
+    const mdl = document.getElementById('mob-img-modal');
+    const pth = "assets/";
     switch(n) {
         case 2008:
-            frt.src = "assets/2008/2008-1.PNG";
-            bck.src  = "assets/2008/2008-2.1.png";
+            frt.src = pth + "2008/2008-1.PNG";
+            bck.src = pth + "2008/2008-2.1.png";
+            mdl.src = pth + "2008/2008-1.PNG";
             break;
         case 1999:
-            frt.src = "assets/1999/m-1999-1.png";
-            bck.src  = "assets/1999/m-1999-2.png";
+            frt.src = pth + "1999/m-1999-1.png";
+            bck.src = pth + "1999/m-1999-2.png";
+            mdl.src = pth + "1999/m-1999-1.png";
             break;
         case 1998:
-            frt.src = "assets/1998/m-1998-1.png";
-            bck.src  = "assets/1998/m-1998-2.png";
+            frt.src = pth + "1998/m-1998-1.png";
+            bck.src = pth + "1998/m-1998-2.png";
+            mdl.src = pth + "1998/m-1998-1.png";
             break;
         case 1990:
-            frt.src = "assets/1990/1990-1.PNG";
-            bck.src  = "assets/1990/1990-2.PNG";
+            frt.src = pth + "1990/1990-1.PNG";
+            bck.src = pth + "1990/1990-2.PNG";
+            mdl.src = pth + "1990/1990-1.PNG";
             break;
         case 1989:
-            frt.src = "assets/1990/1990-1.PNG";
-            bck.src  = "assets/1990/1990-2.PNG";
+            frt.src = pth + "1990/1990-1.PNG";
+            bck.src = pth + "1990/1990-2.PNG";
+            mdl.src = pth + "1989/1989-1.PNG";
             break;
         case 1988:
-            frt.src = "assets/1988/1988-2.png";
-            bck.src  = "assets/1988/m-1988-2.png";
+            frt.src = pth + "1988/1988-2.png";
+            bck.src = pth + "1988/m-1988-2.png";
+            mdl.src = pth + "1988/1988-1.PNG";
             break;
     }
 }

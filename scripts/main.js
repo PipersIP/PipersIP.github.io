@@ -279,10 +279,10 @@ function thing(year) {
 } 
 
 document.addEventListener("keydown", event => {
-if (event.isComposing || event.keyCode === 27) {
-    close_modals();
-    return;
-}
+    if (event.isComposing || event.keyCode === 27) {
+        close_modals();
+        return;
+    }
 });
 
 function flip() {
