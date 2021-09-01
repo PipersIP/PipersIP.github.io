@@ -14,119 +14,6 @@
             alert('merry christmas');
         }
     </script>
-    <style>
-        * {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-        }
-        .header-imgs {
-            padding: 30px 0;
-        }
-        .pipers-logo {
-            display: block;
-            margin: auto;
-            max-width: 100%;
-        }
-        .pipers-logo:hover {
-            cursor: pointer;
-        }
-        .unicorn-img {
-            display: none;
-        }
-        .pipers-grey {background-color: rgb(150, 158, 150);}
-        .txt-white {color: white}
-        .top-band {
-            padding: 20px;
-        }
-        .top-links {
-            display: none;
-            width: 800px;
-            margin: auto;
-        }
-        .main-pg-title {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-        }
-        
-        #main-content {
-            width: 100%;
-            max-width: 800px;
-            padding-top: 50px;
-            margin: auto;
-        }
-        
-        .search-stuff {margin: 20px;}
-        
-        #results {
-            margin-top: 30px;
-            width: 100%;
-            max-width: 800px;
-            margin-bottom: 200px;
-            border-collapse: collapse;
-        }
-        
-        #results th {
-            background-color: rgb(204, 0, 1);
-            color: white;
-            text-align: left;
-            padding: 5px;
-            padding-left: 20px;
-            font-family: 'Poppins', sans-serif;
-        }
-        #results tr {padding: 5px}
-        #results tr:nth-child(even) {background-color: rgb(236, 236, 236);}
-
-        #pg-content { 
-            margin-top: 25px;
-            background-color: rgb(16, 50, 78);
-        }
-        
-        footer {
-            text-align: center;
-            padding-bottom: 25px;
-            border-bottom: 40px solid rgb(204, 0, 1);
-            width: 100%;
-            margin-top: 25px;
-            bottom: 0px;
-        }
-        
-        @media only screen and (min-width: 800px) {
-            .header-imgs {
-                display: grid;
-                grid-template-columns: 240px 435px 125px;
-                padding: 30px 0;
-                width: 100%;
-                max-width: 800px;
-                margin: auto;
-            }
-            .pipers-logo {
-                padding: 10px;
-                grid-column: 1;
-            }
-            .unicorn-img {
-                display: block;
-                width: 125px;
-                grid-column: 3;
-                margin-right: 0;
-            }
-            .top-links {
-                display: block;
-            }
-            .top-link {
-                text-decoration: none;
-            }
-            .search-stuff {margin: 0;}
-        
-            .results-cntry {
-                width: 100px;
-            }
-            .results-detls {
-                width: 200px;
-            }
-            
-        
-        }
-    </style>
 </head>
 
 <body>
@@ -155,6 +42,27 @@
             <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-4' class='tree flipped'>
             <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-5' class='tree '>
             <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-6' class='tree flipped'>
+        </div>
+        <div id='tree-decorations'> <!-- layer 5 -->
+            <div id="dec-grid">
+                <img src='assets/decorations/bauble-1985.png' id='decoration-1' class='bauble' onclick='thing(1985);'>
+                <img src='assets/decorations/dec-1988.png' id='decoration-2' class='bauble' onclick='thing(1988);'>
+                <img src='assets/decorations/bauble-1989.png' id='decoration-3' class='bauble' onclick='thing(1989);'>
+                <img src='assets/decorations/dec-1990.png' id='decoration-4' class='bauble' onclick='thing(1990);'>
+                <img src='assets/decorations/bauble-1996-2.png' id='decoration-5' class='bauble' onclick='thing(1996);'>
+                <img src='assets/decorations/dec-1998.png' id='decoration-6' class='bauble' onclick='thing(1998);'>
+                <img src='assets/decorations/dec-1999.png' id='decoration-7' class='bauble' onclick='thing(1999);'>
+                <img src='assets/decorations/dec-2001.png' id='decoration-8' class='bauble' onclick='thing(2001);'>
+                <img src='assets/decorations/dec-2004-2.png' id='decoration-9' class='bauble' onclick='thing(2004);'>
+                <img src='assets/decorations/dec-2005-2.png' id='decoration-10' class='bauble' onclick='thing(2005);'>
+                <img src='assets/decorations/dec-2007-small.png' id='decoration-11' class='bauble new-baub' onclick='thing(2007);'>
+                <img src='assets/decorations/bauble-2008.png' id='decoration-12' class='bauble' onclick='thing(2008);'>
+                <img src='assets/decorations/dec-2014-2.png' id='decoration-13' class='bauble' onclick='thing(2014);'>
+                <img src='assets/decorations/dec-2015-2.png' id='decoration-14' class='bauble new-baub' onclick='thing(2015);'>
+                <img src='assets/decorations/dec-2016-2.png' id='decoration-15' class='bauble' onclick='thing(2016);'>
+                <img src='assets/decorations/dec-2019.png' id='decoration-16' class='bauble' onclick='thing(2019);'>
+                <img src='assets/decorations/dec-2020.png' id='decoration-17' class='bauble' onclick='thing(2020);'>
+            </div>
         </div>
     </div>
 
