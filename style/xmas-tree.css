@@ -286,7 +286,7 @@ footer {
     bottom: 0px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .header-imgs {
         display: grid;
         grid-template-columns: 240px 435px 125px;
@@ -310,5 +310,30 @@ footer {
     }
     .top-link {
         text-decoration: none;
+    }
+
+    .lrg-scr-card-wrapper {
+        grid-column: 2;
+        grid-row: 1;
+        display: block !important;
+        width: 755px;
+        max-height: 98vh;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 10px;   
+        margin-top: 10px;   
+    }
+
+    .snow1 {
+        grid-column: 1 / span 2 !important;
+        grid-row: 1;
+    }
+    .snow2 {
+        grid-column: 1 / span 2 !important;
+        grid-row: 1;
+    }
+    .snow3 {
+        grid-column: 1 / span 2 !important;
+        grid-row: 1;
     }
 }

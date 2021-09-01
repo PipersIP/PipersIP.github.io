@@ -9,11 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel='icon' href='assets/pipers/favicon.ico'> 
-    <script>
-        function xmas() {
-            alert('merry christmas');
-        }
-    </script>
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/flip.css">
+    <link rel="stylesheet" href="style/flap.css">
+    <link rel="stylesheet" href="style/flop.css">
+    <link rel="stylesheet" href="style/static.css">
+    <link rel="stylesheet" href="style/controls.css"> <!-- important for this to be the last card css file -->
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/master.js"></script>
+    <script src="scripts/flip.js"></script>
+    <script src="scripts/flap.js"></script>
+    <script src="scripts/flop.js"></script>
+    <script src="scripts/static.js"></script>
+
 </head>
 
 <body>
@@ -45,24 +53,29 @@
         </div>
         <div id='tree-decorations'> <!-- layer 5 -->
             <div id="dec-grid">
-                <img src='assets/decorations/bauble-1985.png' id='decoration-1' class='bauble' onclick='thing(1985);'>
-                <img src='assets/decorations/dec-1988.png' id='decoration-2' class='bauble' onclick='thing(1988);'>
-                <img src='assets/decorations/bauble-1989.png' id='decoration-3' class='bauble' onclick='thing(1989);'>
-                <img src='assets/decorations/dec-1990.png' id='decoration-4' class='bauble' onclick='thing(1990);'>
-                <img src='assets/decorations/bauble-1996-2.png' id='decoration-5' class='bauble' onclick='thing(1996);'>
-                <img src='assets/decorations/dec-1998.png' id='decoration-6' class='bauble' onclick='thing(1998);'>
-                <img src='assets/decorations/dec-1999.png' id='decoration-7' class='bauble' onclick='thing(1999);'>
-                <img src='assets/decorations/dec-2001.png' id='decoration-8' class='bauble' onclick='thing(2001);'>
-                <img src='assets/decorations/dec-2004-2.png' id='decoration-9' class='bauble' onclick='thing(2004);'>
-                <img src='assets/decorations/dec-2005-2.png' id='decoration-10' class='bauble' onclick='thing(2005);'>
-                <img src='assets/decorations/dec-2007-small.png' id='decoration-11' class='bauble new-baub' onclick='thing(2007);'>
-                <img src='assets/decorations/bauble-2008.png' id='decoration-12' class='bauble' onclick='thing(2008);'>
-                <img src='assets/decorations/dec-2014-2.png' id='decoration-13' class='bauble' onclick='thing(2014);'>
-                <img src='assets/decorations/dec-2015-2.png' id='decoration-14' class='bauble new-baub' onclick='thing(2015);'>
-                <img src='assets/decorations/dec-2016-2.png' id='decoration-15' class='bauble' onclick='thing(2016);'>
-                <img src='assets/decorations/dec-2019.png' id='decoration-16' class='bauble' onclick='thing(2019);'>
-                <img src='assets/decorations/dec-2020.png' id='decoration-17' class='bauble' onclick='thing(2020);'>
+                <img src='assets/decorations/bauble-1985.png' id='decoration-1' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-1988.png' id='decoration-2' class='bauble' onclick='createFlipper(1988)'>
+                <img src='assets/decorations/bauble-1989.png' id='decoration-3' class='bauble' onclick='createFlipper(1989)'>
+                <img src='assets/decorations/dec-1990.png' id='decoration-4' class='bauble' onclick='createFlipper(1990)'>
+                <img src='assets/decorations/bauble-1996-2.png' id='decoration-5' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-1998.png' id='decoration-6' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-1999.png' id='decoration-7' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-2001.png' id='decoration-8' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-2004-2.png' id='decoration-9' class='bauble' onclick='createFlapper(2004)'>
+                <img src='assets/decorations/dec-2005-2.png' id='decoration-10' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-2007-small.png' id='decoration-11' class='bauble new-baub' onclick='createFlopper(2007)'>
+                <img src='assets/decorations/bauble-2008.png' id='decoration-12' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-2014-2.png' id='decoration-13' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-2015-2.png' id='decoration-14' class='bauble new-baub' onclick=''>
+                <img src='assets/decorations/dec-2016-2.png' id='decoration-15' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-2019.png' id='decoration-16' class='bauble' onclick=''>
+                <img src='assets/decorations/dec-2020.png' id='decoration-17' class='bauble' onclick=''>
             </div>
+        </div>
+        <div class='modal-wrapper'></div>
+
+        <div class='lrg-scr-card-wrapper'>
+            <div class='lrg-scr-card-content'></div>
         </div>
     </div>
 
