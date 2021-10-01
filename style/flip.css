@@ -7,7 +7,7 @@
     background-color: transparent;
     width: 500px;
     height: 575px;
-    border: 1px solid #f1f1f1;
+    /* border: 1px solid #f1f1f1; */
     perspective: 1000px; 
   }
   .flip-card:hover { cursor: pointer; }

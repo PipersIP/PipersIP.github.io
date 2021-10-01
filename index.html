@@ -4,54 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prior Art</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/xmas-tree.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel='icon' href='assets/pipers/favicon.ico'> 
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/flip.css">
+    <link rel="stylesheet" href="style/flap.css">
+    <link rel="stylesheet" href="style/flop.css">
+    <link rel="stylesheet" href="style/static.css">
+    <link rel="stylesheet" href="style/controls.css"> <!-- important for this to be the last card css file -->
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/master.js"></script>
+    <script src="scripts/flip.js"></script>
+    <script src="scripts/flap.js"></script>
+    <script src="scripts/flop.js"></script>
+    <script src="scripts/static.js"></script>
 
-    
 </head>
+
 <body>
+    <header class='pipers-header'>
+        <div class='header-imgs'>
+            <a href='http://piperpat.com'>
+                <img src="assets/pipers/logo.png" class='pipers-logo'></a>
+            <img src='assets/pipers/redunicorn-2.jpg' class='unicorn-img'>
+        </div>
+        <div class='pipers-grey top-band'>
+            <h1 class='main-pg-title txt-white'>Prior Christmas Card Art</h1>
+            <ul class='txt-white top-links'>
+                <li><a class='txt-white top-link' href='http://piperpat.com/'>home</a></li>
+                <li><a class='txt-white top-link' href='http://wwwattorneys.piperpat.com/'>worldwide attorneys</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id='pg-content'>
+        <div class="snow1"></div> <!-- layer 1 -->
+        <div class="snow2"></div> <!-- layer 2 -->
+        <div class="snow3"></div> <!-- layer 3 -->
+        <div id='christmas-tree'> <!-- layer 4 -->
+            <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-1' class='tree'>
+            <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-2' class='tree flipped'>
+            <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-3' class='tree'>
+            <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-4' class='tree flipped'>
+            <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-5' class='tree '>
+            <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-6' class='tree flipped'>
+        </div>
+        <div id='tree-decorations'> <!-- layer 5 -->
+            <div id="dec-grid">
+                <img src='assets/decorations/bauble-1985.png' id='decoration-1' class='bauble' onclick='createFlopper(1985)'>
+                <img src='assets/decorations/dec-1988.png' id='decoration-2' class='bauble' onclick='createFlipper(1988)'>
+                <img src='assets/decorations/bauble-1989.png' id='decoration-3' class='bauble' onclick='createFlipper(1989)'>
+                <img src='assets/decorations/dec-1990.png' id='decoration-4' class='bauble' onclick='createFlipper(1990)'>
+                <img src='assets/decorations/bauble-1996-2.png' id='decoration-5' class='bauble' onclick='createFlopper(1996)'>
+                <img src='assets/decorations/dec-1998.png' id='decoration-6' class='bauble' onclick='createFlipper(1998)'>
+                <img src='assets/decorations/dec-1999.png' id='decoration-7' class='bauble' onclick='createFlipper(1999)'>
+                <img src='assets/decorations/dec-2001.png' id='decoration-8' class='bauble' onclick='createFlopper(2001)'>
+                <img src='assets/decorations/dec-2004-2.png' id='decoration-9' class='bauble' onclick='createFlapper(2004)'>
+                <img src='assets/decorations/dec-2005-2.png' id='decoration-10' class='bauble' onclick='createFlapper(2005)'>
+                <img src='assets/decorations/dec-2007-small.png' id='decoration-11' class='bauble new-baub' onclick='createFlopper(2007)'>
+                <img src='assets/decorations/bauble-2008.png' id='decoration-12' class='bauble' onclick='createFlipper(2008)'>
+                <img src='assets/decorations/dec-2014-2.png' id='decoration-13' class='bauble' onclick='createFlopper(2014)'>
+                <img src='assets/decorations/dec-2015-2.png' id='decoration-14' class='bauble new-baub' onclick='createFlopper(2015)'>
+                <img src='assets/decorations/dec-2016-2.png' id='decoration-15' class='bauble' onclick='createFlopper(2016)'>
+                <img src='assets/decorations/dec-2019.png' id='decoration-16' class='bauble' onclick='createStatic(2019)'>
+                <img src='assets/decorations/dec-2020.png' id='decoration-17' class='bauble' onclick='createFlopper(2020)'>
+            </div>
+        </div>
+        <div class='modal-wrapper'></div>
 
-    <div id='christmas-tree'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-3' class='tree'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-2' class='tree flipped'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-1' class='tree'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-4' class='tree flipped'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-5' class='tree '>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-6' class='tree flipped'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-7' class='tree ' style='display: none'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-8' class='tree flipped' style='display: none'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-9' class='tree ' style='display: none'>
-        <img src='assets/decorations/christmas-tree-section-2.png' id='xmas-10' class='tree flipped' style='display: none'>
+        <div class='lrg-scr-card-wrapper'>
+            <div class='lrg-scr-card-content'></div>
+        </div>
     </div>
-    <div id='tree-decorations'>   
-        <img src='assets/decorations/bauble-1985.png' id='decoration-1' class='bauble' onclick='thing(1985);'>
-        <img src='assets/decorations/dec-1988.png' id='decoration-2' class='bauble' onclick='thing(1988);'>
-        <img src='assets/decorations/bauble-1989.png' id='decoration-3' class='bauble' onclick='thing(1989);'>
-        <img src='assets/decorations/bauble-1990.png' id='decoration-4' class='bauble' onclick='thing(1990);'>
-        <img src='assets/decorations/dec-1986.png' id='decoration-5' class='bauble' onclick='thing(1996);'>
-        <img src='assets/decorations/dec-1998.png' id='decoration-6' class='bauble' onclick='thing(1998);'>
-        <img src='assets/decorations/dec-1999.png' id='decoration-7' class='bauble' onclick='thing(1999);'>
-        <img src='assets/decorations/dec-2001.png' id='decoration-8' class='bauble' onclick='thing(2001);'>
-        <img src='assets/decorations/dec-2004.png' id='decoration-9' class='bauble' onclick='thing(2004);'>
-        <img src='assets/decorations/dec-2005.png' id='decoration-10' class='bauble' onclick='thing(2005);'>
-        <img src='assets/decorations/dec-2007-small.png' id='decoration-11' class='bauble new-baub' onclick='thing(2007);'>
-        <img src='assets/decorations/bauble-2008.png' id='decoration-12' class='bauble' onclick='thing(2008);'>
-        <img src='assets/decorations/dec-2014-2.png' id='decoration-13' class='bauble' onclick='thing(2014);'>
-        <img src='assets/decorations/bauble-2015-2.png' id='decoration-14' class='bauble new-baub' onclick='thing(2015);'>
-        <img src='assets/decorations/dec-2016-2.png' id='decoration-15' class='bauble' onclick='thing(2016);'>
-        <img src='assets/decorations/dec-2019.png' id='decoration-16' class='bauble' onclick='thing(2019);'>
-        <img src='assets/decorations/dec-2020.png' id='decoration-17' class='bauble' onclick='thing(2020);'>
-    </div>
-    
-    <div class='modal'></div>
-    <div class='lrg-scr-card-wrapper'>
-        <div class='lrg-scr-card-content'></div>
-    </div>
-    <div class='lrg-scr-credits-wrapper'></div> 
-    
+
+    <footer>
+        &copy pipers 2021
+    </footer>
 </body>
-<script src="scripts/old-main.js"></script>
-<script src="scripts/old-flappy.js"></script>
-
 </html>
