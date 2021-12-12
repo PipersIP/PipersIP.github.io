@@ -60,7 +60,7 @@ function createFlipper(n) {
             mdl.src = pth + "1989/1989-1.PNG";
             break;
         case 1988:
-            frt.src = pth + "1988/1988-2.png";
+            frt.src = pth + "1988/1988-2.PNG";
             bck.src = pth + "1988/m-1988-2.png";
             mdl.src = pth + "1988/1988-1.PNG";
             break;
