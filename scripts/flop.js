@@ -5,6 +5,7 @@ function touchCardBook() {
     if (closedFlop) {
         document.getElementById('book-card-cover').style.transform = 'rotateY(-180deg)';
         document.getElementById('inside-1').style.transform = 'rotateY(0deg)';
+        document.getElementById('inside-2').classList.remove("hide-modal");
         
     } else {
         document.getElementById('inside-1').style.transform = 'rotateY(180deg)';
@@ -28,7 +29,7 @@ function createFlopper(n) {
                 <div class='inside-1 card-shadow' id='inside-1'>
                     <img src='assets/other/img/tst-2.png' id='page-2-img'>
                 </div>
-                <div class='inside-2 card-shadow'>
+                <div class='inside-2 card-shadow hide-modal' id='inside-2'>
                     <img src='assets/other/img/tst-3.png' id='page-3-img'>
                 </div>
             </div>
