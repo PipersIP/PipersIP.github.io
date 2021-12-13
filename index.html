@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style/flap.css">
     <link rel="stylesheet" href="style/flop.css">
     <link rel="stylesheet" href="style/static.css">
+    <link rel="stylesheet" href="style/credits.css">
     <link rel="stylesheet" href="style/controls.css"> <!-- important for this to be the last card css file -->
     <script src="scripts/modal.js"></script>
     <script src="scripts/master.js"></script>
@@ -53,12 +54,12 @@
         </div>
         <div id='tree-decorations'> <!-- layer 5 -->
             <div id="dec-grid">
-                <img src='assets/decorations/bauble-1985.png' id='decoration-1' class='bauble' onclick='createFlopper(1985)'>
-                <img src='assets/decorations/dec-1988.png' id='decoration-2' class='bauble' onclick='createFlipper(1988)'>
-                <img src='assets/decorations/bauble-1989.png' id='decoration-3' class='bauble' onclick='createFlipper(1989)'>
-                <img src='assets/decorations/dec-1990.png' id='decoration-4' class='bauble' onclick='createFlipper(1990)'>
-                <img src='assets/decorations/bauble-1996-2.png' id='decoration-5' class='bauble' onclick='createFlopper(1996)'>
-                <img src='assets/decorations/dec-1998.png' id='decoration-6' class='bauble' onclick='createFlipper(1998)'>
+                <img src='assets/decorations/bauble-1985.png' id='decoration-1' class='bauble' onclick='openCard(1985)'>
+                <img src='assets/decorations/dec-1988.png' id='decoration-2' class='bauble' onclick='openCard(1988)'>
+                <img src='assets/decorations/bauble-1989.png' id='decoration-3' class='bauble' onclick='openCard(1989)'>
+                <img src='assets/decorations/dec-1990.png' id='decoration-4' class='bauble' onclick='openCard(1990)'>
+                <img src='assets/decorations/bauble-1996-2.png' id='decoration-5' class='bauble' onclick='openCard(1996)'>
+                <img src='assets/decorations/dec-1998.png' id='decoration-6' class='bauble' onclick='openCard(1998)'>
                 <img src='assets/decorations/dec-1999.png' id='decoration-7' class='bauble' onclick='createFlipper(1999)'>
                 <img src='assets/decorations/dec-2001.png' id='decoration-8' class='bauble' onclick='createFlopper(2001)'>
                 <img src='assets/decorations/dec-2004-2.png' id='decoration-9' class='bauble' onclick='createFlapper(2004)'>
@@ -77,6 +78,8 @@
         <div class='lrg-scr-card-wrapper'>
             <div class='lrg-scr-card-content'></div>
         </div>
+
+        <div id='lrg-scr-credits' class="hide-me"></div>
     </div>
 
     <footer>
