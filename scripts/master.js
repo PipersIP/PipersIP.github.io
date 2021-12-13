@@ -44,6 +44,50 @@ function openCard(year) {
             cartoonist = malcolm;
             createFlipper(1998);
             break;
+        case 1999:
+            cartoonist = malcolm;
+            createFlipper(1999);
+            break;
+        case 2001:
+            cartoonist = mark;
+            createFlopper(2001)
+            break;
+        case 2004:
+            cartoonist = mark;
+            createFlapper(2004);
+            break;
+        case 2005:
+            cartoonist = mark;
+            createFlapper(2005);
+            break;
+        case 2007:
+            cartoonist = malcolm;
+            createFlopper(2007);
+            break;
+        case 2008:
+            cartoonist = malcolm;
+            createFlipper(2008);
+            break;
+        case 2014:
+            cartoonist = mark;
+            createFlopper(2014);
+            break;
+        case 2015:
+            cartoonist = malcolm;
+            createFlopper(2015);
+            break;
+        case 2016:
+            cartoonist = malcolm;
+            createFlopper(2016);
+            break;
+        case 2019:
+            cartoonist = malcolm;
+            createStatic(2019);
+            break;
+        case 2020:
+            cartoonist = malcolm;
+            createFlopper(2020);
+            break;
     }
 
     credit_element_dskt.innerText = `designed by ${cartoonist}`
