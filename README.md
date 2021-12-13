@@ -28,3 +28,6 @@ On mobile screens, all of these are displayed as static modals. No exciting clic
 </ul>
 
 On firefox, third-attempy.html & tree-tst doesn't show big screen display at all. It's always showing the modal. Bug with my complicated screen size logic?
+
+## NB when transferring to piperpat
+The CSS on piperpat has been edited so a simple copy-paste of these files will destroy those changes -- they're also not saved anywhere else 
