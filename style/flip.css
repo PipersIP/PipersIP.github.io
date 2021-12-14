@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1000px) and (min-height: 650px) {
+@media only screen and (min-width: 1200px) and (min-height: 650px) {
 
   .modal { display: none !important; }
   .lrg-scr-card-wrapper { display: block !important; }
