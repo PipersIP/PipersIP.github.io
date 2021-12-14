@@ -5,6 +5,7 @@ function touchCardFlap() {
     if (closedFlap) {
         document.getElementById('cover-horiz').style.transform = 'rotateX(180deg)';
         document.getElementById('inside-1-horiz').style.transform = 'rotateX(0deg)';
+        document.getElementById('inside-2-horiz').classList.remove("hide-modal");
         
     } else {
         document.getElementById('inside-1-horiz').style.transform = 'rotateX(-180deg)';
@@ -28,7 +29,7 @@ function createFlapper(n) {
                 <div class='inside-1-horiz ' id='inside-1-horiz'>
                     <img src="" id='page-2-img-flap'>
                 </div>
-                <div class='inside-2-horiz card-shadow'>
+                <div class='inside-2-horiz card-shadow hide-modal' id='inside-2-horiz'>
                     <img src="" id='page-3-img-flap'>
                 </div>
             </div>

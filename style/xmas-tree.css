@@ -289,7 +289,7 @@ footer {
     bottom: 0px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     .header-imgs {
         display: grid;
         grid-template-columns: 240px 435px 125px;
@@ -304,7 +304,7 @@ footer {
     }
     .unicorn-img {
         display: block;
-        width: 125px;
+        width: 125px; /* delete this on piperpat -- it uses the unicorn w circle border */
         grid-column: 3;
         margin-right: 0;
     }
