@@ -239,6 +239,13 @@
     transform: rotate(10deg);
     width: 80%;
 }
+#decoration-18 {
+    grid-row: 12;
+    grid-column: 1;
+    border-radius: 20px;
+    transform: rotate(-5deg);
+    width: 80%;
+}
 .bauble:hover { cursor: pointer; }
 
 

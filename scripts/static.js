@@ -20,6 +20,10 @@ function createStatic(n) {
             stc.src = pth + '2019/c2019.PNG';
             mdl.src = pth + '2019/c2019.PNG';
             break;
+        case 2021:
+            stc.src = pth + '2021/card.PNG';
+            mdl.src = pth + '2021/m-card.PNG';
+            break;
     }
     
 }

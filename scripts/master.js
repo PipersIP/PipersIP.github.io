@@ -88,6 +88,10 @@ function openCard(year) {
             cartoonist = malcolm;
             createFlopper(2020);
             break;
+        case 2021:
+            cartoonist = malcolm;
+            createStatic(2021);
+            break;
     }
 
     credit_element_dskt.innerText = `designed by ${cartoonist}`
