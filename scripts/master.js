@@ -60,6 +60,10 @@ function openCard(year) {
             cartoonist = mark;
             createFlapper(2005);
             break;
+        case 2006:
+            cartoonist = malcolm;
+            createFlopper(2006);
+            break;
         case 2007:
             cartoonist = malcolm;
             createFlopper(2007);

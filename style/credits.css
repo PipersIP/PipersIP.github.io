@@ -27,8 +27,8 @@
         height: 50px;
         position: -webkit-sticky; /* Safari */
         position: sticky;
-        top: 700px;   
-        margin-top: 700px; 
+        top: 90vh;   
+        margin-top: 90vh; 
     }
 }
 

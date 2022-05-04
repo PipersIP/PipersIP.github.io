@@ -74,6 +74,12 @@ function createFlopper(n) {
             pgT.src = pth + "2007/2007-3.png";
             mdl.src = pth + "2007/2007-1.png";
             break;
+        case 2006:
+            pgF.src = pth + "2006/front.PNG";
+            pgS.src = pth + "2006/pg-1.PNG";
+            pgT.src = pth + "2006/pg-2.PNG";
+            mdl.src = pth + "2006/front.PNG";
+            break;
         case 2001:
             pgF.src = pth + "2001/2001a.png";
             pgS.src = pth + "2001/2001b.png";
